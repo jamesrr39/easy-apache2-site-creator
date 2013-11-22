@@ -1,4 +1,9 @@
-easy-apache2-site-creator
-=========================
+Easy apache2 site creator. Good for developing new sites quickly and easily
+Written on ubuntu 12.04 LTS, with apache sites-available folder under /etc/apache2/sites-available/ and hosts file at /etc/hosts
 
-apache2 easy site creator
+Usage:
+sh src/easy-apache2-site-creator.sh [site_name] [site_url] [document_root]
+
+site_name: what the site will be known as to apache2, what the logs files will be called.
+site_url: the url the site will be available at
+document_root: where the web pages are located on disk
