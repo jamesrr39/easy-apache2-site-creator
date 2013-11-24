@@ -12,7 +12,7 @@ temp_file=$(echo "$temp_file" | sed -e s/SERVERNAME/$site_url/g)
 temp_file=$(echo "$temp_file" | sed -e s#DOCUMENT_ROOT#$site_document_root#g)
 temp_file=$(echo "$temp_file" | sed -e s/LOG_FILE_NAME/$site_name/g)
 
-if [ -f /etc/apache2/$site_name ]; then
+if [ -f /etc/apache2/sites-available/$site_name ]; then
 	echo "Can't set up $site_name, it already exists."
 	exit
 fi
