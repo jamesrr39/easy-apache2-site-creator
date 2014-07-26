@@ -3,6 +3,23 @@
 site_name=$1
 site_url=$2
 site_document_root=$3
+
+# interactive parameters
+if [ "$site_name" = "" ]; then
+	read -p "Enter the site name: " site_name
+fi
+
+if [ "$site_url" = "" ]; then
+	read -p "Enter the site URL: " site_url
+fi
+
+if [ "$site_document_root" = "" ]; then
+	read -p "Enter the site document root: " site_document_root
+fi
+
+
+
+
 vhost_template_path='../res/default'
 
 temp_file="$(cat $vhost_template_path)"
