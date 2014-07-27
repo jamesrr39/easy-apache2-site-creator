@@ -17,8 +17,11 @@ if [ "$site_document_root" = "" ]; then
 	read -p "Enter the site document root: " site_document_root
 fi
 
-
-
+# check the vhosts module is enabled
+if [ "$(apache2ctl -M | grep -c vhost)" -eq 0 ]; then
+	echo "The apache vhosts module is not enabled. Enable it with 'a2enmod vhost_alias'"
+	exit
+fi
 
 vhost_template_path='../res/default'
 
