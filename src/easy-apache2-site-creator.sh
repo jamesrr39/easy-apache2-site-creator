@@ -36,7 +36,7 @@ if [ -f /etc/apache2/sites-available/$site_name ]; then
 	echo "Can't set up $site_name, it already exists."
 	exit
 fi
-echo "$temp_file" > /etc/apache2/sites-available/$site_name
+echo "$temp_file" > /etc/apache2/sites-available/$site_name.conf
 echo "$hosts_entry" >> /etc/hosts
 
 a2ensite $site_name
